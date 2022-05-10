@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+header {
+    background-color: chartreuse;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+main {
+    width: 100%;
+}
+
+aside {
+    float: left;
+    background-color: mediumpurple;
+    width: 30%;
+    height: 100vh;
+    text-align: center;
+}
+
+aside h1 {
+    padding-top: 100px;
+}
+
+.content {
+    float: left;
+    background-color: #78c7c9;
+    width: 70%;
+    height: 100vh;
+    text-align: center;
+}
+
+.content h1 {
+    padding-top: 100px;
+}
+
+footer {
+    clear: both;
+    height: 150px;
+    background-color: antiquewhite;
+    text-align: center;
+    line-height: 150px;
+}
