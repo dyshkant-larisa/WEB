@@ -1,0 +1,15 @@
+.body {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+form p {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    padding: 20px;
+}
