@@ -1,3 +1,4 @@
+const form = document.getElementById('form');
 const cell = document.getElementById('cell');
 const input = document.getElementById('color-picker');
 
@@ -16,7 +17,7 @@ const clickHandler = () => {
 }
 
 const dblclickHandler = () => {
-  const rows = document.querySelectorAll('table tr');
+   const rows = document.querySelectorAll('table tr');
   
   let counter = 0;
   
@@ -36,6 +37,19 @@ const dblclickHandler = () => {
   }
 }
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const elements = document.getElementById('form').elements;
+  const obj ={};
+  
+  for(let i = 0 ; i < elements.length ; i++){
+    const item = elements.item(i);
+    obj[item.name] = item.value;
+  }
+
+  document.getElementById("demo").innerHTML = JSON.stringify(obj);
+};
+
 cell.addEventListener('mouseover', hoverHandler);
 cell.addEventListener('mouseleave', mouseLeaveHandler);
 
@@ -43,3 +57,4 @@ cell.addEventListener('mouseleave', mouseLeaveHandler);
 
 input.addEventListener('input', clickHandler);
 cell.addEventListener('dblclick', dblclickHandler);
+form.addEventListener('submit', handleSubmit)
